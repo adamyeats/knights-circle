@@ -57,22 +57,6 @@ class LinkedList<T extends ListNode<T>> {
     this.length++;
   }
 
-  public getIndex(node: T): number {
-    let current = this.head;
-    let index = 0;
-
-    while (current !== null) {
-      if (current === node) {
-        return index;
-      }
-
-      current = current.next;
-      index++;
-    }
-
-    return -1; // node not found in list
-  }
-
   // BONUS ITERATOR!!!
   *[Symbol.iterator]() {
     let current = this.head;
