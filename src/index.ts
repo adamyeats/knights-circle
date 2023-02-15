@@ -15,7 +15,7 @@ class PlayerNode extends ListNode<PlayerNode> {
     super();
   }
 
-  public get isDisqualified(): boolean {
+  public get eliminated(): boolean {
     return this.hp <= 0;
   }
 
@@ -95,7 +95,7 @@ class Game {
     let current = this.list.head!;
     let previous = this.list.tail!;
 
-    if (this.list.head?.isDisqualified) {
+    if (this.list.head?.eliminated) {
       this.list.head = this.list.head.next!;
       this.list.length--;
     }
@@ -103,7 +103,7 @@ class Game {
     while (current.next !== current) {
       const next = current.next;
 
-      if (current.isDisqualified) {
+      if (current.eliminated) {
         console.log(`${current.name} has been eliminated!`);
 
         previous.next = next;
@@ -126,7 +126,7 @@ class Game {
 
     let current = this.list.head;
 
-    while (current && current.isDisqualified) {
+    while (current && current.eliminated) {
       current = current.next;
     }
 
