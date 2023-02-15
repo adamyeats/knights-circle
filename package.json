@@ -13,9 +13,7 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "dependencies": {
-    "dotenv": "^16.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "@types/node": "^18.11.19",

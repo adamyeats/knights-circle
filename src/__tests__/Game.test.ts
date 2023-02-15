@@ -30,9 +30,7 @@ describe('Game', () => {
 
       // mock `Math.random()` to always return 0.5 so that we get
       // deterministic results
-      const mockMath = Object.create(global.Math);
-      mockMath.random = jest.fn().mockReturnValue(0.5);
-      global.Math = mockMath;
+      jest.spyOn(Math, 'random').mockReturnValue(0.5);
 
       // rig the game so that Bedivere is the winner
       game.list.head!.hp = 2;
