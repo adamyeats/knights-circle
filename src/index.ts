@@ -3,10 +3,6 @@
  */
 class ListNode<T extends ListNode<T>> {
   public next: T | null = null;
-
-  constructor() {
-    this.next = null;
-  }
 }
 
 /**
