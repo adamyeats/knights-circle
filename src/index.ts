@@ -9,13 +9,10 @@ class ListNode<T extends ListNode<T>> {
  * PlayerNode is a ListNode that contains a hp property for use in the game.
  */
 class PlayerNode extends ListNode<PlayerNode> {
-  public hp: number;
-  public name: string;
+  public hp: number = 10;
 
-  constructor(name: string = 'Player') {
+  constructor(public name: string = 'Player') {
     super();
-    this.hp = 10;
-    this.name = name;
   }
 
   public isDisqualified() {
