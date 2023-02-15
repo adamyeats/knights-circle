@@ -54,6 +54,9 @@ class LinkedList<T extends ListNode<T>> {
   *[Symbol.iterator]() {
     let current = this.head;
 
+    // could also do a forEach here, but I wanted to use a for loop
+    // as it's a little more performant and that's probably a good
+    // trait for this use case
     for (let i = 0; i < this.length; i++) {
       if (current) {
         yield current;
