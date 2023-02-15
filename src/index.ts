@@ -15,11 +15,11 @@ class PlayerNode extends ListNode<PlayerNode> {
     super();
   }
 
-  public get isDisqualified() {
+  public get isDisqualified(): boolean {
     return this.hp <= 0;
   }
 
-  public takeDamage(damage: number) {
+  public takeDamage(damage: number): void {
     this.hp -= damage;
 
     if (this.hp < 0) {
@@ -36,7 +36,7 @@ class LinkedList<T extends ListNode<T>> {
   public head: T | null = null;
   public tail: T | null = null;
 
-  public append(node: T) {
+  public append(node: T): void {
     if (this.length === 0) {
       this.head = node;
       this.tail = node;
@@ -70,7 +70,7 @@ class LinkedList<T extends ListNode<T>> {
  * Die is a class that simulates a die.
  */
 class Die {
-  static roll() {
+  static roll(): number {
     return Math.floor(Math.random() * 6) + 1;
   }
 }
@@ -87,7 +87,7 @@ class Game {
     });
   }
 
-  public simulate() {
+  public simulate(): void {
     if (this.list.length === 0) {
       return;
     }
@@ -119,7 +119,7 @@ class Game {
     this.list.tail = previous;
   }
 
-  public getWinner() {
+  public getWinner(): PlayerNode | null {
     if (this.list.length !== 1) {
       return null;
     }
@@ -134,7 +134,7 @@ class Game {
   }
 }
 
-function main() {
+function main(): void {
   const game = new Game([
     'Arthur',
     'Lancelot',
