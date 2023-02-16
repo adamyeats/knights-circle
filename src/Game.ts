@@ -47,13 +47,9 @@ export class Game {
   }
 
   public getWinner(): PlayerNode | null {
-    if (this.list.length !== 1) {
-      return null;
-    }
-
     let current = this.list.head;
 
-    while (current && current.eliminated) {
+    while (current?.eliminated) {
       current = current.next;
     }
 
