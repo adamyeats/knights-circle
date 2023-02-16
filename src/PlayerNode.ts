@@ -1,4 +1,4 @@
-import { ListNode } from "./ListNode";
+import { ListNode } from './ListNode';
 
 /**
  * PlayerNode is a ListNode that contains a hp property for use in the game.
