@@ -1,9 +1,9 @@
-import { ListNode } from './ListNode';
+import { LinkedListNode } from './LinkedListNode';
 
 /**
  * PlayerNode is a ListNode that contains a hp property for use in the game.
  */
-export class PlayerNode extends ListNode<PlayerNode> {
+export class PlayerNode extends LinkedListNode<PlayerNode> {
   public hp: number = 10;
 
   constructor(public name: string = 'Player') {

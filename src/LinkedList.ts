@@ -1,9 +1,9 @@
-import { ListNode } from './ListNode';
+import { LinkedListNode } from './LinkedListNode';
 
 /**
  * LinkedList is a generic class that can be used to create a linked list.
  */
-export class LinkedList<T extends ListNode<T>> {
+export class LinkedList<T extends LinkedListNode<T>> {
   public length: number = 0;
   public head: T | null = null;
   public tail: T | null = null;
