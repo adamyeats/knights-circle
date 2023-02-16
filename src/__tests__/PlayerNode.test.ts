@@ -12,8 +12,9 @@ describe('PlayerNode', () => {
   });
 
   it('should allow the `name` property to be set', () => {
-    const player = new PlayerNode('Arthur');
-    expect(player.name).toBe('Arthur');
+    const name = 'Arthur';
+    const player = new PlayerNode(name);
+    expect(player.name).toBe(name);
   });
 
   it('should have an `eliminated` property that returns true when `hp` is 0 or less', () => {

@@ -65,6 +65,7 @@ describe('LinkedList', () => {
           expect(node).toBe(node3);
           break;
       }
+
       i++;
     }
   });

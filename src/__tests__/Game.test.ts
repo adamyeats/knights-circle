@@ -41,9 +41,7 @@ describe('Game', () => {
 
       expect(game.list.length).toBe(1);
       expect(game.getWinner()?.name).toBe('Bedivere');
-    });
 
-    afterAll(() => {
       jest.spyOn(Math, 'random').mockRestore();
     });
   });

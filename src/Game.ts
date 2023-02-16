@@ -28,7 +28,7 @@ export class Game {
     }
 
     while (current.next !== current) {
-      const next = current.next;
+      const { next } = current;
 
       if (current.eliminated) {
         console.log(`${current.name} has been eliminated!`);
