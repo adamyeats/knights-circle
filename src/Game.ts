@@ -22,8 +22,8 @@ export class Game {
     let current = this.list.head!;
     let previous = this.list.tail!;
 
-    if (this.list.head?.eliminated) {
-      this.list.head = this.list.head.next!;
+    if (current.eliminated) {
+      this.list.head = current.next;
       this.list.length--;
     }
 
